@@ -32,7 +32,8 @@ boolean
    - parseInt, setTimeout, ...          : 일반 함수
 2. 호스트 객체
    - 자바스크립트 엔진이 임베디드된 환경(호스트)의 객체(자바스크립트 접근 가능)
-   - 
+   - 호스트 환경이 브라우저라면 : document, location, XmlHttpRequest(웹통신할때사용,데이터만 받고싶을 때), window,...
+   - 호스트 환경이 노드(Node.js)라면 : 
 3. 사용자 객체
 */
 console.log("========== 원시 타입 (Primitive Type) =========="); // 데이터
