@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*
+	 DOM Event 종류
+	 1. 마우스
+	 - mousedown -> mouseup -> click -> mousedown -> mouseup -> click -> dbclick
+	 moussover, mouseout
+	 2. 키보드
+	 keydown -> key -> keypress
+	 3. form
+	 submit
+	 4. input
+	 focus, blur, chage                                                
+	 5. touch(모바일 웹)
+	
+	 용어정리
+	 1. Event Model
+	 - DOM의 HTMLElement의 Event Handler를 설정하는 방법에 대한 표준
+	 2. Event Name
+	 - load, click, mousedown, submit, blur, ...
+	 3. Event Attribute
+	 - DOM Event Model Level 0
+	 - onload, onclick, onmousedown, onsubmit, onblur, ...
+	 4. Event Listener
+	 - DOM Event Model Level2
+	 - function(){}
+	 5. Event Model
+	
+	 O2
+	 */
+	window.addEventListener("load", function() {
+		var imgElement = document.createElement("img");
+		// 1. Id로 가져오기
+		var header01 = document.getElementById('header-01');
+		var header02 = document.getElementById('header-02');
+
+		// 2. Tag Name 가져오기
+		var h4s = document.getElementsByTagName('h4');
+
+		// 3. Class Name 가져오기
+		var h5s = document.getElementsByClass("header");
+
+		// 4. CSS 선택자로 가져오기
+		var header7 = document.querySelecetor("#header-07");
+		var h6s = document.querySelectorAll(".header2");
+
+		setTimeout(function() {
+			header01.innerText += 'by getElementById()';
+			header02.innerText += 'by getElementById()';
+
+			h4s[0].innerText += 'by getElementsByTagName()';
+			h4s[1].innerText += 'by getElementsByTagName()';
+
+			h5s[0].innerText += 'by getElementsByClassName()';
+			h5s[1].innerText += 'by getElementsByClassName()';
+
+			header7.innerText += 'by querySelector()';
+			h6s[1].innerText += 'by querySelectorAll()';
+
+		}, 3000)
+	});
+</script>
+</head>
+<body>
+	<h1>DOM(Document Object Moel)</h1>
+	<h2>5. Event 처리</h2>
+	<h3>Event Model Level10 - Inline</h3>
+</body>
+</html>
