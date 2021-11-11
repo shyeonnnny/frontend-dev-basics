@@ -1,0 +1,23 @@
+response = {
+	result: "success",
+	message: null,
+	data: {
+		no:1
+		name: "둘리",
+		.
+		.
+		.
+	}
+}
+
+
+<response> // root elemant
+	<result>seccess</result>
+	<message></message>
+	<data> // rooe element 
+		<no>1</no>
+		<name>둘리</name>
+		.
+		.
+	<data>
+</response>

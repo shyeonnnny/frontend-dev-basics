@@ -48,23 +48,26 @@ a5[0] = 0;
 a5["1"] = 1;
 a5["name"] = "둘리";
 console.log(a5["0"], a5[1], a5.length);
-console.log("----------------------------------------")
+console.log("--------------------1--------------------")
 for(prop in a5) {
     console.log(prop);
 }
-
+console.log("--------------------2--------------------");
 o5 = {}; // length가 없는 객체
 o5.length = 0;
 o5[0] = 0;
 o5["1"] = 1;
 o5["name"] = "둘리";
 console.log(o5["0"], o5[1], o5.length);
-console.log("----------------------------------------")
+console.log("--------------------3--------------------")
 for(prop in o5) {
     console.log(prop);
 }
 
-console.log("----------------------------------------");
+
+
+// 이 부분 다시 물어보기
+console.log("--------------------4--------------------");
 a5.forEach(function(e, index){
     console.log(index + " : "  + e);
 });

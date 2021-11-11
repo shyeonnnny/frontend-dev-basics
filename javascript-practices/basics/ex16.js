@@ -30,7 +30,7 @@ setTimeout(function(){
 var a = 10;
 var b = 20;
 var m = 10;
-var s = a/m + b.m;
+var s = a/m + b/m;
 
 var s = (function(a, b){
     var m = 10;

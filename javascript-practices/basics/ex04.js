@@ -29,6 +29,7 @@ var f = function() {
     // PI = 0;
 }
 
+
 // error: 접근이 안됨
 // console.log(x);
 

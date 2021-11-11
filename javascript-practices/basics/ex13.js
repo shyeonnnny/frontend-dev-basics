@@ -1,10 +1,10 @@
-/*
-string
-*/
+/**
+ * string
+ */
 
 // 배열처럼 접근이 가능하다.
 var str1 = "Hello World";
-for (var i = 0; str1.length; i++){
+for(var i = 0; i < str1.length; i++) {
     console.log(str1[i]);
 }
 
@@ -18,27 +18,30 @@ console.log(str4);
 var str5 = 5 + "5";
 console.log(str5);
 
-var str6 = "boolean : " + true;
+var str6 = "boolean:" + true;
 console.log(str6);
 
 // 메소드
 var str7 = "string1 string2 string3";
 
 var index = str7.indexOf('string2');
+console.log(index);
+
+var index = str7.indexOf('string4');
 console.log(index); // 찾지 못하면 -1
 
 var str8 = str7.substr(10); // 10th ~ end
 console.log(str8);
 
-var str9 = str7.substr(10,3) // (10, count) : 10th부터 3개 출력
-console.log(str9);
+var str9 = str7.substr(10, 3/*count*/);
+console.log(str9)
 
-var str10 = str7.substring(10, 13) // (10, last index - 1)
+var str10 = str7.substring(10, 13 /*last index - 1*/);
 console.log(str10);
 
 var a = str7.split(" ");
 console.log(a);
 
 var str11 = 'abcdef';
-var b = str11.split(":");
-console.log(b);
+var a = str11.split(":");
+console.log(a);
