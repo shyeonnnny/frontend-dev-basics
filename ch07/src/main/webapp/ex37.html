@@ -2,45 +2,43 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>sample1</title>
-<link href='image-viewer.css' type='text/css' rel="stylesheet"/>
 <script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="image-viewer.js"></script>
-<script>
-ImageViewer.init();
-</script>
-
-
 <script type="text/javascript">
-var images = [ 
-	"국화:Chrysanthemum.jpg", 
-	"사막:Desert.jpg", 
-	"수국:Hydrangeas.jpg", 
-	"해파리:Jellyfish.jpg", 
-	"코알라:Koala.jpg", 
-	"등대:Lighthouse.jpg", 
-	"펭귄:Penguins.jpg", 
-	"툴립:Tulips.jpg"
-];
+/* jquery plug in */
+$.fn.hello = function(){  // 얘가 플러그인
+	console.log("Hello World");
+	console.log(this.length);
+	console.log(this.attr('title'));
+	return this;
+}
 
-$(function(){
-	$("#btn-change").click(function(){
-		// 랜덤 변수 
-		var result = Math.floor(Math.random() * images.length);  // 0 ~ 7
-		console.log(result);
+$.fn.flash = function(){
+	var _this = this;
+	var isBlink = false;
+	setInterval(function(){
+		_this.css('background-color', isBlink ? '#f00' : '#EFEFEF'); // isBlink가 true이면 : 앞 false면 : 뒤
+		isBlink = !isBlink;
+	}, 1000);
+}
+
+$(function() {
+	$("#btn").click(function(){
+		//console.log(this); // this가 무엇을 가르키는지 헷갈릴때 console에 찍어보고 맞으면 사용
+		// $("#btn").hello(); // 클릭하는 자식 UI를 넣어줌
+		$(this)// this에 "#btn"도 되고 'h1'을 넣어줘도됨
+			.hello()
+			//.css('background-color', 'red');
+			.flash();
+
 	});
 });
 </script>
 </head>
 <body>
-	<div class="image-viewer">
-		<div class="buttons">
-			<button id="btn-change">이미지변경</button>
-			<button id="btn-slideshow">슬라이드쇼 시작</button>
-		</div>
-		<div>
-			<img/>
-		</div>
+	<h1>jQuery Plug In</h1>
+
+	<div style='width:200px; margin: 50px auth'>
+		<button id='btn' title='click me'>click me</button> <!-- 플러그인?-->
 	</div>
 </body>
 </html>
